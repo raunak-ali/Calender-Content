@@ -1,0 +1,44 @@
+#PRINTONG ALL 
+#GET  http://localhost:8080/api/content
+
+
+#CREATING A NEW CONTENT
+#POST http://localhost:8080/api/content
+#Content-Type: application/json
+
+#{
+    
+  #"id": 2,
+ # "name": "SECOND CONTENT",
+  #"desc": "MEOW MOEWOO MEOW  AGAIAN BABAY",
+ #"status": "IDEA",
+  #"contenttype": "ARTICLE",
+  #"dateCreated": "2023-06-21T10:47:19.6375577",
+  #"dateUpdated": null,
+  #"url": ""
+
+#}
+
+
+
+#UPDATING
+##PUT http://localhost:8080/api/content/22
+#@Content-Type: application/json
+
+#{
+    
+  #@"id": 9988,
+  #"name": "SECOND CONTENT",
+  #"desc": "MEOW MOEWOO MEOW  AGAIAN BABAY",
+#"status": "IDEA",
+ # "contenttype": "ARTICLE",
+  #"dateCreated": "2023-06-21T10:47:19.6375577",
+  #"dateUpdated": null,
+  #"url": "http://MEOW MEOW"
+
+#}
+
+
+
+# DELETE
+#DELETE  http://localhost:8080/api/content/22

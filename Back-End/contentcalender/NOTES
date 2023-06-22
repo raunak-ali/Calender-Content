@@ -1,0 +1,37 @@
+Video  Refrence:-https://www.youtube.com/watch?v=UgX5lgv4uVM
+To start=> start.spring.io
+@Annotation:-THESE HELP 
+Spring Core:- https://docs.spring.io/spring-framework/reference/core/beans/introduction.html
+    ApplicationContext:-
+                Bean:-AN instance of a class:-ConfigurableApplicationContext context=SpringApplication.run(Application.class, args);
+		                Arrays.stream(context.getBeanDefinitionNames()).forEach(System.out::println);
+		                //All the classes  in my application
+                @Component ===>  //This helps us declare a Bean::_
+                If u cant use the annotation cause of some reason, use the @Bean:-This is a method level annotation,when we are using imported classes(Makes sure to use @Confiiguration before the class)
+                Bean Factory:-Every Class is stored here., We ask for class import to the Bean
+We will use the Record type of class too define our model that is cause:-ecords are immutable data classes that require only the type and name of fields. So ,the main difference between class and record type in Java is that a record has the main purpose of storing data, while a class defines responsibility. Records are immutable, while classes are not.
+We create enum classe for special featureseg :-STATUS
+@RESTCONTROLLER:-SPECIAL TYPE  OF  COMPONENT
+@CONTROLLER(ALLCONTROLLERS):ARE CLASSSES  THAT TAKE A REQUEST AND RETURN A REsPONSE TO  THE WEBPAGe(SORtA lIKE VIEW IN DJANGO?)
+Optional is a container object used to contain not-null objects. Optional object is used to represent null with absent value. This class has various utility methods to facilitate code to handle values as ‘available’ or ‘not available’ instead of checking null values->EG:-USED IN ContentCollectionRepository
+****DEPENDENCY IJECTION****
+    in the controller,when we have a contructor in there, we will need a  instace of the collectionrepository(BASCIALLY TO FIND THE PIECE OF  CONTENT BY ID FOR US)
+    BUT SINCE COMPONENT IS RESPOSSIPLEFOR THE INITITION OF  OBJECCTS< WE SHOULD BE USING HE MARKING(ANNOTATION) TO INITIATE HE Repository
+    BASCIALLY WE ARE ***DEPENDENT*** ON OUR --REPOSITORY-- CLASS  TO MAKE OUR CONTROLLER WORK>
+    THE WAY TO GET THIS REPOSITORY CLASS(DEPENDENCY) INTO OUR CONTROLLER  IS KNOWN AS <DEPENDENCY INJECTION>
+    @Autowired ->WE  ADD THIS BEFORE THHE CONSTRUCTOR(TO SPECIFY INJECTION)
+**@GetMapping()**
+    We an provide a  path n it which specifisthe url 
+    we can also specify a dynamic variable eg @GetMapping("{/id}")
+    and then use the @pathVariablle to retrive the parameter inputeed in the dynamic  url by the user"
+**RequestBody**
+    That a method parameter is bound to the boody of the web request(POST  request).eg:-SAve method in the controller
+**REST Client**
+    We are using the rest client to allow  us to text post and get request to our web server
+    made a  file called "content.http",and made the Requets we want to tests by specifying the path(url) and type +any parameers required.
+    This type of testing is also called "CRUL" testing
+***@@PutMapping:-  When we update  a existing resource***
+***FRONT END***
+    WE  USE VITE.js.devv to download the  project then used a live server to go  live there,
+    main.js was edited  which is able to fetch our application using the url\
+    @CrossOrigin() this before oour controller ///will  hellp our  front end to  fetch our application
